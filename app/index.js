@@ -49,7 +49,9 @@ class API {
         console.log(data)
 
         if (typeof(data.joke) !== 'undefined') {
-            return joke.innerHTML = data.joke
+            return  joke.innerHTML = data.joke,
+                    joke_delivery.innerHTML = ''
+
         } else {
             return  joke.innerHTML = data.setup,
                     joke_delivery.innerHTML = data.delivery
